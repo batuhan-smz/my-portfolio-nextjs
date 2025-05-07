@@ -78,7 +78,7 @@ export default function Home() {
     <div>
       {/* Yeni Testimonials Bölümü */}
       <section className="py-12 md:py-20"> {/* Bölümler arasına boşluk */}
-         <h2 className="text-3xl font-bold text-center mb-10">Batuhan Semiz's Portfolyo</h2>
+         <h2 className="text-3xl font-bold text-center mb-10">Batuhan Semiz&apos;s Portfolyo</h2>
          <AnimatedTestimonials testimonials={testimonialsData} autoplay={true} />
       </section>
 
