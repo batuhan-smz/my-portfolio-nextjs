@@ -19,7 +19,7 @@ export default function ContactPage() {
 
       {/* Giriş Paragrafı */}
       <p className="text-lg text-center text-gray-600 dark:text-gray-400 mb-12 md:mb-16 max-w-2xl mx-auto">
-        Aşağıdaki bilgiler aracılığıyla bana ulaşabilir veya formu kullanarak doğrudan mesaj gönderebilirsiniz. Yeni projeler, işbirliği fırsatları veya sadece bir 'Merhaba!' demek için yazmaktan çekinmeyin.
+        Aşağıdaki bilgiler aracılığıyla bana ulaşabilir veya formu kullanarak doğrudan mesaj gönderebilirsiniz. Yeni projeler, işbirliği fırsatları veya sadece bir &apos;Merhaba!&apos; demek için yazmaktan çekinmeyin.
       </p>
 
       {/* İki Sütunlu Yapı */}
