@@ -48,7 +48,7 @@ const CustomNavbar: React.FC = () => {
 
   return (
     // Ana Konteyner
-    <motion.div className="fixed top-0 left-1/2 -translate-x-1/2 mt-[20px] z-50 w-full max-w-fit">
+    <motion.div className="fixed top-0 left-1/2 -translate-x-1/2 mt-[20px] z-1000 w-full max-w-fit">
       <div className="container flex justify-center">
         {/* Navbar'ın görünen kutusu */}
         <div className={cn( "flex items-center", "bg-white/80 dark:bg-gray-900/80", "border border-gray-200 dark:border-gray-700/50", "backdrop-blur-lg", "py-2 pl-2 pr-3 rounded-full shadow-lg", "overflow-visible" )}>
