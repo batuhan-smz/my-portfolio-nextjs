@@ -4,9 +4,8 @@
 import React from 'react';
 import Link from 'next/link'; // Next.js Link
 import { useTheme } from 'next-themes';
-import { cn } from '../lib/utils';
 // lucide-react ikonları (dicons yerine)
-import { Moon, Sun, ArrowUp, Mail, Twitter, Instagram, Linkedin, Github, CodeXml, Heart } from 'lucide-react';
+import { Moon, Sun, ArrowUp, Mail, Twitter, Linkedin, Github, CodeXml} from 'lucide-react';
 
 // Scroll to top fonksiyonu
 function handleScrollTop() {

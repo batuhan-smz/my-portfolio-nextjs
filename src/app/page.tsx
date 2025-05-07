@@ -6,8 +6,6 @@ import LoadingSpinner from '../components/ui/LoadingSpinner';
 import Image from 'next/image';
 import ProjectCard from '../components/ui/ProjectCard';
 import {AnimatedTestimonials} from '../components/ui/animated-testimonials';
-import { l } from 'framer-motion/dist/types.d-DDSxwf0n';
-import { link } from 'fs';
 
 export default function Home() {
    // Projeleri tutacak state (başlangıçta boş dizi)

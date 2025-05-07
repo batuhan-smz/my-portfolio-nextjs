@@ -1,4 +1,7 @@
 // src/types/project.ts (Yeni dosya örneği)
+
+import { Timestamp } from 'firebase/firestore';
+
 export interface IProject {
     id: string;
     title: string;
@@ -7,6 +10,6 @@ export interface IProject {
     imageUrl?: string;
     projectUrl?: string;
     repoUrl?: string;
-    createdAt?: any; // Veya daha spesifik bir tip
-    updatedAt?: any;
+    createdAt?: Timestamp | null;
+    updatedAt?: Timestamp | null;
   }
