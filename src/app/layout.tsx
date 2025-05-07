@@ -5,6 +5,7 @@ import { AuthProvider } from "../context/AuthContext";
 import CustomNavbar  from "../components/navbars/CustomNavbar"
 import { ThemeProvider } from "../components/ThemeProvider";
 import Footer from "../components/Footer";
+import { SparklesCore } from "../components/ui/sparkles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,16 @@ export default function RootLayout({
         dark:from-slate-900 dark:via-gray-900 dark:to-neutral-950 
         min-h-screen flex flex-col transition-colors duration-300`}
       >
+        <SparklesCore
+            id="tsparticles_background"
+            background="transparent" // Body'nin gradient'i görünsün
+            minSize={0.4} // Daha küçük parçacıklar
+            maxSize={1.2} // Daha küçük parçacıklar
+            particleDensity={60} // Daha seyrek (tüm sayfa için)
+            className="fixed inset-0 -z-10 w-full h-full" // <<< Sabitlendi ve arkaya gönderildi
+            particleColor="#FFFFFF" // Beyaz veya açık renkler
+            speed={0.4} // Daha yavaş
+        />
         <ThemeProvider
           attribute="class" // Tailwind ile kullanmak için 'class' attribute'unu kullan
           defaultTheme="dark" // Varsayılan tema dark olsun

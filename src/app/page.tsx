@@ -6,6 +6,8 @@ import LoadingSpinner from '../components/ui/LoadingSpinner';
 import Image from 'next/image';
 import ProjectCard from '../components/ui/ProjectCard';
 import {AnimatedTestimonials} from '../components/ui/animated-testimonials';
+import ButtonColorful from "../components/ui/button-colorful";
+import { Download } from "lucide-react";
 
 export default function Home() {
    // Projeleri tutacak state (başlangıçta boş dizi)
@@ -78,7 +80,37 @@ export default function Home() {
     <div>
       {/* Yeni Testimonials Bölümü */}
       <section className="py-12 md:py-20"> {/* Bölümler arasına boşluk */}
-         <h2 className="text-3xl font-bold text-center mb-10">Batuhan Semiz&apos;s Portfolyo</h2>
+         {/* === YENİ BAŞLIK BÖLÜMÜ BAŞLANGICI === */}
+         <div className="h-[30rem] md:h-[35rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md relative mb-10 md:mb-16"> {/* Yükseklik ve alt boşluk ayarlandı */}
+
+            {/* Başlık Metni */}
+            <h1 className="md:text-5xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20 px-4"> {/* Boyutlar ayarlandı, padding eklendi */}
+                Batuhan Semiz&apos;s Portfolyo {/* Kesme işareti için &apos; */}
+            </h1>
+            {/* Alt Kısım: Gradient */}
+            <div className="w-[40rem] h-5 relative mt-4"> {/* Metinle arasına boşluk */}
+                {/* Ince Gradient Çizgiler */}
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[7px] w-3/4 blur-sm" />
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4" />
+                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[7px] w-1/4 blur-sm" />
+                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-1/4" />
+            </div>
+            <a
+                href="http://localhost:3000/BatuhanSemizCV.pdf" // public klasöründeki CV dosyasının yolu
+                download="BatuhanSemizCV.pdf" // İndirildiğinde önerilecek dosya adı
+              >
+              <ButtonColorful
+                
+                className="shadow-lg hover:shadow-blue-500/30 dark:hover:shadow-blue-400/30" // Ekstra gölge efekti
+                label="CV'mi İndir" // Buton metni
+                icon={Download} // İndirme ikonu
+              >
+                  {/* İçerik ButtonColorful tarafından oluşturulacak */}
+                
+              </ButtonColorful>
+            </a>
+            </div>
+            {/* === YENİ BAŞLIK BÖLÜMÜ SONU === */}
          <AnimatedTestimonials testimonials={testimonialsData} autoplay={true} />
       </section>
 
