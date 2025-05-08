@@ -96,7 +96,7 @@ export default function Home() {
                 <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[2px] w-1/4" />
             </div>
             <a
-                href="http://localhost:3000/BatuhanSemizCV.pdf" // public klasöründeki CV dosyasının yolu
+                href="/BatuhanSemizCV.pdf" // public klasöründeki CV dosyasının yolu
                 download="BatuhanSemizCV.pdf" // İndirildiğinde önerilecek dosya adı
               >
               <ButtonColorful
