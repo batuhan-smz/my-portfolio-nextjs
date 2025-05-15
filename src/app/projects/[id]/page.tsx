@@ -107,10 +107,16 @@ export default function ProjectDetailPage() {
 
         {/* Açıklama */}
         <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
-             {/* Uzun açıklamayı burada göster */}
-             {/* Eğer açıklama markdown ise, markdown render kütüphanesi kullanabilirsin */}
-            <p>{project.description}</p>
-            {/* Açıklama birden fazla paragrafsa ona göre düzenle */}
+               {project.description?.split('\n').map((paragraph, index) => {
+              // Eğer paragraf sadece boşluklardan oluşuyorsa (örn: \n\n sonucu oluşan boş string)
+              // bir non-breaking space içeren bir <p> render et.
+              // Bu, prose sınıflarının margin'leri sayesinde boş bir satır gibi görünecektir.
+              if (paragraph.trim() === '') {
+                return <p key={index}>&nbsp;</p>;
+              }
+              // Dolu paragraflar için normal render.
+              return <p key={index}>{paragraph}</p>;
+            })}
         </div>
 
 

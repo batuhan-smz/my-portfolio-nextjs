@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Link Sütunları (Basitleştirilmiş) */}
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div className="mt-16 grid gap-8 xl:mt-0">
              {/* Sütun 1 */}
             <div className="md:grid md:grid-cols-1 md:gap-8">
                <div>
@@ -102,6 +102,36 @@ const Footer: React.FC = () => {
              {/* Sütun 2 */}
              {/* <div className="md:grid md:grid-cols-1 md:gap-8"> ... </div> */}
           </div>
+
+          {/* ========= YENİ İLETİŞİM ALANI BAŞLANGICI ========= */}
+            <div className="mt-16 grid gap-8 xl:mt-0">
+              <div className="md:grid md:grid-cols-1 md:gap-8">
+                <div>
+                  <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
+                    Hızlı İletişim
+                  </h3>
+                  <div className="mt-4 space-y-2">
+                    <a
+                      href="mailto:batuhansemiz15@gmail.com" // <<< Kendi E-posta Adresini Yaz
+                      className="flex items-center text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors group"
+                    >
+                      <Mail size={16} className="mr-2 flex-shrink-0 text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" />
+                      batuhansemiz15@gmail.com {/* <<< Kendi E-posta Adresini Yaz */}
+                    </a>
+                    <Link
+                      href="/contact" // İletişim sayfanın yolu
+                      className="flex items-center text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors group"
+                    >
+                      {/* <MessageCircle (veya başka bir ikon) size={16} className="mr-2 flex-shrink-0 text-gray-400 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors" /> */}
+                      İletişim Sayfasına Git →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* ========= YENİ İLETİŞİM ALANI SONU ========= */}
+          
+
         </div>
 
         {/* Alt Bölüm: Copyright, Tema ve Yukarı Çık */}
